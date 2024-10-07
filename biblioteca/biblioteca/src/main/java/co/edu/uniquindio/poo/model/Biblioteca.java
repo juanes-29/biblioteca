@@ -22,11 +22,10 @@ public class Biblioteca {
     }
 
     /**
-     * AÑADE un bibliotecario a la lista si no existe ya.
+     * Añade un bibliotecario a la lista si no existe ya.
      * 
-     * @param bibliotecario El bibliotecario a añadir.
-     * @return Un mensaje indicando si el bibliotecario fue añadido correctamente o
-     *         si ya existía.
+     * @param bibliotecario
+     * @return 
      * @throws IllegalArgumentException
      */
     public String añadirBibliotecario(Bibliotecario bibliotecario) throws IllegalArgumentException{
@@ -42,11 +41,10 @@ public class Biblioteca {
     }
 
     /**
-     * ELIMINA un bibliotecario de la lista si existe.
+     * Elimina un bibliotecario de la lista si existe.
      * 
-     * @param bibliotecario El bibliotecario a eliminar.
-     * @return Un mensaje indicando si el bibliotecario fue eliminado correctamente
-     *         o si no existía.
+     * @param bibliotecario
+     * @return 
      * @throws IllegalArgumentException
      */
     public String eliminarBibliotecario(Bibliotecario bibliotecario) throws IllegalArgumentException{
@@ -61,10 +59,10 @@ public class Biblioteca {
     }
 
     /**
-     *  BUSCA un bibliotecario en la lista.
+     *  Busca un bibliotecario en la lista.
      * 
-     * @param bibliotecarioBuscar El bibliotecario a buscar.
-     * @return El bibliotecario encontrado o null si no se encuentra en la lista.
+     * @param bibliotecarioBuscar 
+     * @return 
      * @throws IllegalArgumentException
      */
     public Bibliotecario buscarBibliotecario(Bibliotecario bibliotecarioBuscar) throws IllegalArgumentException{
@@ -79,13 +77,11 @@ public class Biblioteca {
     }
 
     /**
-     * EDITA un bibliotecario existente en la lista reemplazándolo por uno nuevo.
+     * Edita un bibliotecario existente en la lista reemplazándolo por uno nuevo.
      * 
-     * @param bibliotecario      El bibliotecario actual que se desea editar.
-     * @param nuevoBibliotecario El nuevo bibliotecario con la información
-     *                           actualizada.
-     * @return Un mensaje indicando si el bibliotecario fue encontrado y editado o
-     *         no.
+     * @param bibliotecario
+     * @param nuevoBibliotecario
+     * @return
      */
     public String editarBibliotecario(Bibliotecario bibliotecario, Bibliotecario nuevBibliotecario) {
         String mensaje = "No se encontró el elemento";
@@ -100,9 +96,8 @@ public class Biblioteca {
     /**
      * Añade un estudiante a la lista si no existe ya.
      * 
-     * @param estudiante El estudiante a añadir.
-     * @return Un mensaje indicando si el estudiante fue añadido correctamente o si
-     *         ya existía.
+     * @param estudiante 
+     * @return
      */
     public String añadirEstudiante(Estudiante estudiante) {
         String mensaje = "Estudiante ya existe";
@@ -117,9 +112,8 @@ public class Biblioteca {
     /**
      * Elimina un estudiante de la lista si existe.
      * 
-     * @param id El ID del estudiante a eliminar.
-     * @return Un mensaje indicando si el estudiante fue eliminado correctamente o
-     *         si no existía.
+     * @param id 
+     * @return 
      */
     public String eliminarEstudiante(String id) {
         String mensaje = "Estudiante no existe";
@@ -134,8 +128,8 @@ public class Biblioteca {
     /**
      * Busca un estudiante en la lista por su ID.
      * 
-     * @param id El ID del estudiante a buscar.
-     * @return El estudiante encontrado o null si no se encuentra en la lista.
+     * @param id
+     * @return 
      */
     public Estudiante buscarEstudianteId(String id) {
         return listaEstudiantes.get(id);
@@ -144,9 +138,9 @@ public class Biblioteca {
     /**
      * Edita un estudiante existente en la lista reemplazándolo por uno nuevo.
      * 
-     * @param id              El ID del estudiante actual que se desea editar.
-     * @param estudianteNuevo El nuevo estudiante con la información actualizada.
-     * @return Un mensaje indicando si el estudiante fue encontrado y editado o no.
+     * @param id
+     * @param estudianteNuevo
+     * @return
      */
     public String editarEstudiante(String id, Estudiante estudianteNuevo) {
         String mensaje = "No se encontró";
@@ -163,9 +157,8 @@ public class Biblioteca {
     /**
      * Añade un préstamo a la lista si no existe ya.
      * 
-     * @param prestamo El préstamo a añadir.
-     * @return Un mensaje indicando si el préstamo fue añadido correctamente o si ya
-     *         existía.
+     * @param prestamo
+     * @return
      */
     public String añadirPrestamo(Prestamo prestamo, Bibliotecario bibliotecario, Estudiante estudiante) {
         String mensaje = "";
@@ -182,9 +175,8 @@ public class Biblioteca {
     /**
      * Elimina un préstamo de la lista si existe.
      * 
-     * @param codigo El código del préstamo a eliminar.
-     * @return Un mensaje indicando si el préstamo fue eliminado correctamente o si
-     *         no existía.
+     * @param codigo
+     * @return 
      */
     public String eliminarPrestamo(String codigo, Bibliotecario bibliotecario, Estudiante estudiante) {
         String mensaje = "Prestamo no existe";
@@ -202,8 +194,8 @@ public class Biblioteca {
     /**
      * Busca un préstamo en la lista por su código.
      * 
-     * @param codigo El código del préstamo a buscar.
-     * @return El préstamo encontrado o null si no se encuentra en la lista.
+     * @param codigo
+     * @return
      */
     public Prestamo buscarPrestamoCodigo(String codigo) {
         return listaPrestamos.get(codigo);
@@ -212,9 +204,9 @@ public class Biblioteca {
     /**
      * Edita un préstamo existente en la lista reemplazándolo por uno nuevo.
      * 
-     * @param codigo        El código del préstamo actual que se desea editar.
-     * @param prestamoNuevo El nuevo préstamo con la información actualizada.
-     * @return Un mensaje indicando si el préstamo fue encontrado y editado o no.
+     * @param codigo
+     * @param prestamoNuevo
+     * @return
      */
 
     public String editarPrestamo(String codigo, Prestamo prestamoNuevo) {
@@ -229,7 +221,7 @@ public class Biblioteca {
      
 
 
-    //OTROS METODOS
+
     
     /**
      * busca un libro por su isbn
@@ -275,7 +267,7 @@ public class Biblioteca {
         return null;
     }
     
-    /** 3.3 Consultar dado el nombre del Libro la cantidad de préstamos en el cual está incluido, es decir si un Libro está incluido en dos préstamos la respuesta sería 2).
+    /** 3.3 Consultar dado el nombre del Libro la cantidad de préstamos en el cual está incluido.
      * @param nombre
      * @return
      */
